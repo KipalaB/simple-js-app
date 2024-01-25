@@ -12,16 +12,26 @@ let pokemonRepository = (function (){
         function getAll () {
             return pokemonList;
         }
-
+        function addListItem(pokemon){
+            let pkmnList = document.querySelector(".pokemon-list")
+            let listItem = document.createElement("li");
+            let button = document.createElement("button");
+            button.innerText = pokemon.name;
+            button.classList.add("button-class");
+            button.addEventListener('click',showDetails);
+            listItem.appendChild(button);
+            pkmnList.appendChild(listItem);
+        }
+        function showDetails(pokemon){
+            console.log(pokemon);
+        }
         return {
             add: add,
-            getAll: getAll
+            getAll: getAll,
+            addListItem: addListItem
         };
 })();
 
 pokemonRepository.getAll().forEach(function(pokemon) {
-    document.write("<p>" + pokemon.name + " || Height : " + pokemon.height + "m" + "</p>")
-    if (pokemon.name == 'Whimsicott'){
-        document.write(' - The best pokemon.')
-    }
+    pokemonRepository.addListItem(pokemon);
 });
