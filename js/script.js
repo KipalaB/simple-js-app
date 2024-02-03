@@ -23,7 +23,7 @@ let pokemonRepository = (function (){
             pkmnList.appendChild(listItem);
         }
         function showDetails(pokemon){
-            console.log(pokemon);
+            console.log(pokemonList);
         }
         return {
             add: add,
