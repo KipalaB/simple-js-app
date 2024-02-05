@@ -18,12 +18,12 @@ let pokemonRepository = (function (){
             let button = document.createElement("button");
             button.innerText = pokemon.name;
             button.classList.add("button-class");
-            button.addEventListener("click", function(){ showDetails(); });
+            button.addEventListener('click', () => showDetails(pokemon));
             listItem.appendChild(button);
             pkmnList.appendChild(listItem);
         }
         function showDetails(pokemon){
-            console.log(pokemonList);
+            console.log(pokemon);
         }
         return {
             add: add,
