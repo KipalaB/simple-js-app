@@ -24,6 +24,7 @@ let pokemonRepository = (function (){
             let listItem = document.createElement("li");
             let button = document.createElement("button");
             button.innerText = pokemon.name;
+            button.classList.add("btn");
             button.classList.add("btn-primary");
             button.addEventListener('click', () => showDetails(pokemon));
             listItem.classList.add(".list-group-item");

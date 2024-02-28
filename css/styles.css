@@ -2,16 +2,6 @@ body {
     padding: 10px 20px;
 }
 
-.button-class {
-    background-color: rgb(72, 30, 112);
-    color: white;
-    padding: 16px 32 px;
-    text-align: center;
-    display: inline-block;
-    margin: 4px 2px;
-    cursor: pointer;
-}
-
 .modal {
     display: none;
   }
